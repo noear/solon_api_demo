@@ -19,14 +19,4 @@ public class ApiGateway extends Gateway {
         //添加Bean
         addBeans(bw -> "api".equals(bw.tag()));
     }
-
-    @Override
-    public void render(Object obj, Context c) throws Throwable {
-        if (obj instanceof Throwable) {
-            c.render(Result.failure("未知错误"));
-            return;
-        }
-
-        super.render(obj, c);
-    }
 }

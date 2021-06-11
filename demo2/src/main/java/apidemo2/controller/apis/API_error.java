@@ -1,4 +1,4 @@
-package apidemo1.controller.apis;
+package apidemo2.controller.apis;
 
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
