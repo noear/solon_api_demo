@@ -1,8 +1,8 @@
 package apidemo3.controller.apis;
 
+import apidemo3.controller.ApiBase;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
-import org.noear.solon.core.handle.Result;
 
 
 /**
@@ -11,9 +11,9 @@ import org.noear.solon.core.handle.Result;
  * @author noear 2021/6/11 created
  */
 @Component(tag = "api")
-public class API_hello_world {
+public class API_hello_world extends ApiBase {
     @Mapping("hello")
-    public Result exec(String name) {
-        return Result.succeed("Hello " + name);
+    public String exec(String name) {
+        return "Hello " + name;
     }
 }
