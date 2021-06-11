@@ -7,7 +7,7 @@ import org.noear.solon.core.handle.ModelAndView;
 import org.noear.solon.core.handle.Result;
 
 /**
- * 自定义一个网关，对结果做了处理的转换处理
+ * 自定义一个网关基类，对结果做了处理的转换处理
  *
  * @author noear 2021/6/11 created
  */
@@ -56,6 +56,7 @@ public abstract class ApiGatewayBase extends Gateway {
         }
 
 
+        //如果想对输出时间点做控制，可以不在这里渲染（由后置拦截器进行渲染）
         c.render(c.result);
     }
 }
