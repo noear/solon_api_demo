@@ -23,6 +23,9 @@ public class AppxService {
         //
         //随便写个示例
         //
-        return db.table("appx").whereEq("app_id", app_id).limit(1).selectItem("*", AppxModel.class);
+        return db.table("appx")
+                .whereEq("app_id", app_id)
+                .limit(1)
+                .selectItem("*", AppxModel.class);
     }
 }
