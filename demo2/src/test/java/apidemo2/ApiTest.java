@@ -21,28 +21,28 @@ public class ApiTest extends HttpTestBase {
     }
 
     @Test
-    public void api_hello() throws IOException{
-       assert  apiCall("/api/hello?name=noear").get("code").getInt() == 403;
-        assert  apiCall("/api/hello?name=noear&t=1").get("code").getInt() == 200;
+    public void api_hello() throws IOException {
+        assert apiCall("/api/hello?name=noear").get("code").getInt() == 403;
+        assert apiCall("/api/hello?name=noear&t=1").get("code").getInt() == 200;
     }
 
     @Test
-    public void api_error() throws IOException{
-        assert  apiCall("/api/hello?name=noear").get("code").getInt() == 403;
-        assert  apiCall("/api/hello?name=noear&t=1").get("code").getInt() == 200;
+    public void api_error() throws IOException {
+        assert apiCall("/api/error").get("code").getInt() == 403;
+        assert apiCall("/api/error?t=1").get("code").getInt() == 400;
     }
 
     @Test
-    public void api_() throws IOException{
-        assert  apiCall("/api/").get("code").getInt() == 404;
-        assert  apiCall("/api/?t=1").get("code").getInt() == 404;
+    public void api_() throws IOException {
+        assert apiCall("/api/").get("code").getInt() == 404;
+        assert apiCall("/api/?t=1").get("code").getInt() == 404;
     }
 
     @Test
-    public void api_2() throws IOException{
-        assert  apiCall("/api/xxx").get("code").getInt() == 404;
-        assert  apiCall("/api/xxx/yyy").get("code").getInt() == 404;
-        assert  apiCall("/api/xxx?t=1").get("code").getInt() == 404;
-        assert  apiCall("/api/xxx/yyy?t=1").get("code").getInt() == 404;
+    public void api_2() throws IOException {
+        assert apiCall("/api/xxx").get("code").getInt() == 404;
+        assert apiCall("/api/xxx/yyy").get("code").getInt() == 404;
+        assert apiCall("/api/xxx?t=1").get("code").getInt() == 404;
+        assert apiCall("/api/xxx/yyy?t=1").get("code").getInt() == 404;
     }
 }

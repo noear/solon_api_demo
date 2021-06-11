@@ -21,18 +21,18 @@ public class ApiTest extends HttpTestBase {
     }
 
     @Test
-    public void api_hello() throws IOException{
-       assert  apiCall("/api/hello?name=noear").get("code").getInt() == 200;
+    public void api_hello() throws IOException {
+        assert apiCall("/api/hello?name=noear").get("code").getInt() == 200;
     }
 
     @Test
-    public void api_() throws IOException{
-        assert  apiCall("/api/").get("code").getInt() == 404;
+    public void api_() throws IOException {
+        assert apiCall("/api/").get("code").getInt() == 404;
     }
 
     @Test
-    public void api_2() throws IOException{
-        assert  apiCall("/api/xxx").get("code").getInt() == 404;
-        assert  apiCall("/api/xxx/yyy").get("code").getInt() == 404;
+    public void api_2() throws IOException {
+        assert apiCall("/api/xxx").get("code").getInt() == 404;
+        assert apiCall("/api/xxx/yyy").get("code").getInt() == 404;
     }
 }
