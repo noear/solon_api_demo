@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.noear</groupId>
+    <artifactId>solon_api_demo</artifactId>
+    <version>demo</version>
+    <packaging>pom</packaging>
+
+    <description>Java project for solon-api demo</description>
+
+    <modules>
+        <module>demo1</module>
+        <module>demo2</module>
+        <module>demo3</module>
+    </modules>
+
+</project>
