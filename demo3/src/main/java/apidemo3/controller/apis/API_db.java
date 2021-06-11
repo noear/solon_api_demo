@@ -11,6 +11,8 @@ import org.noear.solon.extend.validation.annotation.NotZero;
 import java.sql.SQLException;
 
 /**
+ * 有操作数据库的接口
+ *
  * @author noear 2021/6/11 created
  */
 @Component(tag = "api")

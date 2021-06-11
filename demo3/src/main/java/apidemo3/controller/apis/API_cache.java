@@ -6,6 +6,8 @@ import org.noear.solon.annotation.Mapping;
 import org.noear.solon.extend.data.annotation.Cache;
 
 /**
+ * 有使用缓存的接口
+ *
  * @author noear 2021/6/11 created
  */
 @Component(tag = "api")
