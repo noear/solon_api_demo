@@ -1,4 +1,4 @@
-package apidemo3.dso;
+package apidemo3.dso.service;
 
 import apidemo3.model.UserModel;
 import org.noear.solon.annotation.Component;

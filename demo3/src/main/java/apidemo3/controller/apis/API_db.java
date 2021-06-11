@@ -1,7 +1,7 @@
 package apidemo3.controller.apis;
 
 import apidemo3.controller.ApiBase;
-import apidemo3.dso.UserService;
+import apidemo3.dso.service.UserService;
 import apidemo3.model.UserModel;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Inject;
