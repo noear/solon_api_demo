@@ -16,7 +16,6 @@ import java.lang.annotation.Annotation;
  *
  * @author noear 2021/6/11 created
  */
-@Component
 public class ValidatorFailureHandlerImpl implements ValidatorFailureHandler {
 
     @Override
