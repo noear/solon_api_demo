@@ -2,6 +2,7 @@ package apidemo3.dso.service;
 
 import apidemo3.model.AppxModel;
 import org.noear.solon.extend.aspect.annotation.Service;
+import org.noear.solon.extend.data.annotation.Cache;
 import org.noear.weed.DbContext;
 import org.noear.weed.annotation.Db;
 
@@ -16,6 +17,7 @@ public class AppxService {
     @Db
     DbContext db;
 
+    @Cache(seconds = 12)
     public AppxModel getAppx(int app_id) throws SQLException {
         //
         //随便写个示例

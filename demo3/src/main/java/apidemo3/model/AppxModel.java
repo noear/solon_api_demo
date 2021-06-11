@@ -1,11 +1,11 @@
 package apidemo3.model;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
+import java.io.Serializable;
 
 @Data
-public class AppxModel {
+public class AppxModel implements Serializable {
     private int agroup_id;
     private String note;
     private String app_key;
