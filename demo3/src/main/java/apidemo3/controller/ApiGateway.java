@@ -13,7 +13,7 @@ import org.noear.solon.core.handle.Result;
  */
 @Mapping("/api/**")
 @Component
-public class ApiGateway extends Gateway {
+public class ApiGateway extends ApiGatewayBase {
     @Override
     protected void register() {
 
@@ -21,26 +21,11 @@ public class ApiGateway extends Gateway {
         before(c -> {
             //检测有没有token（用 param 替代；方便手浏览器测试）
             if (c.param("t") == null) {
-                //如果没有令牌；直接设定结果
-                c.result = Result.failure(403, "Missing authentication information");
-
-                //设为已处理（主接口就不会进去了）
-                c.setHandled(true);
+                throw ApiCodes.CODE_4001021;
             }
         });
 
         //添加Bean
         addBeans(bw -> "api".equals(bw.tag()));
-    }
-
-    //重写染处理异常
-    @Override
-    public void render(Object obj, Context c) throws Throwable {
-        if (obj instanceof Throwable) {
-            c.render(Result.failure("unknown error"));
-            return;
-        }
-
-        super.render(obj, c);
     }
 }
