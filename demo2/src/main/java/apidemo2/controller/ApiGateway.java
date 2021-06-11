@@ -33,6 +33,7 @@ public class ApiGateway extends Gateway {
         addBeans(bw -> "api".equals(bw.tag()));
     }
 
+    //重写染处理异常
     @Override
     public void render(Object obj, Context c) throws Throwable {
         if (obj instanceof Throwable) {
