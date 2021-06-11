@@ -6,6 +6,7 @@ import apidemo3.model.UserModel;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.annotation.Mapping;
+import org.noear.solon.extend.validation.annotation.NotEmpty;
 
 import java.sql.SQLException;
 
@@ -18,6 +19,7 @@ public class API_db extends ApiBase {
     @Inject
     UserService userService;
 
+    @NotEmpty("userId")
     @Mapping("db")
     public UserModel exec(long userId) throws SQLException {
         return userService.getUser(userId);
