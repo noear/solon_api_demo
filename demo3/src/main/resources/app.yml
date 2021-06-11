@@ -1,2 +1,10 @@
 server.port: 8083
 
+solon.app:
+  name: demoapi3
+  group: demo
+
+cache2:
+  server: redis.water.io:6379
+  user: redis
+  password: 123456
