@@ -4,7 +4,15 @@ solon.app:
   name: demoapi3
   group: demo
 
-cache2:
+demo.cache1:
   server: redis.water.io:6379
   user: redis
   password: 123456
+
+
+demo.db1:
+    schema: rock
+    jdbcUrl: jdbc:mysql://localhost:3306/rock?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=true
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
