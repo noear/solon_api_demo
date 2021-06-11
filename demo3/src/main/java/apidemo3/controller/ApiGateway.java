@@ -1,5 +1,6 @@
 package apidemo3.controller;
 
+import apidemo3.controller.interceptor.TokenInterceptor;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
 import org.noear.solon.core.handle.Context;
@@ -18,12 +19,7 @@ public class ApiGateway extends ApiGatewayBase {
     protected void register() {
 
         //添加个拦截器
-        before(c -> {
-            //检测有没有token（用 param 替代；方便手浏览器测试）
-            if (c.param("t") == null) {
-                throw ApiCodes.CODE_4001021;
-            }
-        });
+        before(new TokenInterceptor());
 
         //添加Bean
         addBeans(bw -> "api".equals(bw.tag()));
