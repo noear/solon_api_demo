@@ -27,7 +27,6 @@ public abstract class ApiGatewayBase extends Gateway {
             //如果有模板，则直接渲染
             //
             c.result = obj;
-            c.render(obj);
         } else {
             //如果没有按Result tyle 渲染
             //
@@ -55,5 +54,8 @@ public abstract class ApiGatewayBase extends Gateway {
 
             c.result = result;
         }
+
+
+        c.render(c.result);
     }
 }

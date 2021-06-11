@@ -19,7 +19,7 @@ public class API_db extends ApiBase {
     @Inject
     AppxService appxService;
 
-    @NotZero("userId")
+    @NotZero("appId")
     @Mapping("db")
     public AppxModel exec(int appId) throws SQLException {
         return appxService.getAppx(appId);
