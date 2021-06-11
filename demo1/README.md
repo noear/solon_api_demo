@@ -9,6 +9,11 @@
 
 [http://localhost:8081/api/hello?name=noear](http://localhost:8081/api/hello?name=noear)
 
+
+* 出错接口：
+
+[http://localhost:8081/api/error](http://localhost:8081/api/error)
+
 * 不存在接口
 
 [http://localhost:8081/api/](http://localhost:8081/api/)

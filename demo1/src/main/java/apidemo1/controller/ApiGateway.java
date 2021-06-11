@@ -2,7 +2,9 @@ package apidemo1.controller;
 
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
+import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.Gateway;
+import org.noear.solon.core.handle.Result;
 
 /**
  * 一个简单的接口网关
@@ -16,5 +18,15 @@ public class ApiGateway extends Gateway {
     protected void register() {
         //添加Bean
         addBeans(bw -> "api".equals(bw.tag()));
+    }
+
+    @Override
+    public void render(Object obj, Context c) throws Throwable {
+        if (obj instanceof Throwable) {
+            c.render(Result.failure("未知错误"));
+            return;
+        }
+
+        super.render(obj, c);
     }
 }

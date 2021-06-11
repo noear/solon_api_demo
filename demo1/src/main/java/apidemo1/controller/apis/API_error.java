@@ -11,9 +11,9 @@ import org.noear.solon.core.handle.Result;
  * @author noear 2021/6/11 created
  */
 @Component(tag = "api")
-public class API_hello_world {
-    @Mapping("hello")
-    public Result exec(String name) {
-        return Result.succeed("Hello " + name);
+public class API_error {
+    @Mapping("error")
+    public Result exec() {
+        throw new RuntimeException("随便报一下");
     }
 }
