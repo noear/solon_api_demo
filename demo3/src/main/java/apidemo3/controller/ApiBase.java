@@ -1,6 +1,6 @@
 package apidemo3.controller;
 
-import org.noear.solon.extend.validation.annotation.Valid;
+import org.noear.solon.validation.annotation.Valid;
 
 /**
  * 在基类，增加验证能力

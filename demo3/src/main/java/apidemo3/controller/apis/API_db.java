@@ -6,7 +6,7 @@ import apidemo3.model.AppxModel;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.annotation.Mapping;
-import org.noear.solon.extend.validation.annotation.NotZero;
+import org.noear.solon.validation.annotation.NotZero;
 
 import java.sql.SQLException;
 

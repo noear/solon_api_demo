@@ -3,7 +3,7 @@ package apidemo3.controller.apis;
 import apidemo3.controller.ApiBase;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
-import org.noear.solon.extend.data.annotation.Cache;
+import org.noear.solon.data.annotation.Cache;
 
 /**
  * 有使用缓存的接口

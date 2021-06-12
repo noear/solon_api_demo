@@ -4,10 +4,10 @@ import apidemo3.controller.ApiCodes;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.Result;
-import org.noear.solon.extend.validation.ValidatorFailureHandler;
-import org.noear.solon.extend.validation.annotation.Logined;
-import org.noear.solon.extend.validation.annotation.NoRepeatSubmit;
-import org.noear.solon.extend.validation.annotation.Whitelist;
+import org.noear.solon.validation.ValidatorFailureHandler;
+import org.noear.solon.validation.annotation.Logined;
+import org.noear.solon.validation.annotation.NoRepeatSubmit;
+import org.noear.solon.validation.annotation.Whitelist;
 
 import java.lang.annotation.Annotation;
 
