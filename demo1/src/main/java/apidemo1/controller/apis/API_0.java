@@ -6,7 +6,7 @@ import org.noear.solon.core.handle.Result;
 
 
 /**
- * 默认接口（没有对应接口时，就会到这里来）
+ * 默认接口（没有对应接口时，就会到这里来）; 但进入网关的接口，要用 @Component 注解
  *
  * @author noear 2021/6/11 created
  */
