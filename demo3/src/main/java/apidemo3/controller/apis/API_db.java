@@ -7,6 +7,7 @@ import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.annotation.Mapping;
 import org.noear.solon.validation.annotation.NotZero;
+import org.noear.solon.validation.annotation.Validated;
 
 import java.sql.SQLException;
 
@@ -25,5 +26,14 @@ public class API_db extends ApiBase {
     @Mapping("db")
     public AppxModel exec(int appId) throws SQLException {
         return appxService.getAppx(appId);
+    }
+
+
+    /**
+     * 添加实体验证示例
+     * */
+    @Mapping("db2")
+    public AppxModel db2(@Validated AppxModel app) throws SQLException {
+        return app;
     }
 }
