@@ -2,9 +2,7 @@ package apidemo1.controller;
 
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
-import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.Gateway;
-import org.noear.solon.core.handle.Result;
 
 /**
  * 一个简单的接口网关
