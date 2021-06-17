@@ -10,7 +10,7 @@ import org.noear.solon.validation.annotation.Valid;
 /**
  * @author noear 2021/6/11 created
  */
-@Valid
+@Valid //增加验证注解支持
 public class ApiBase implements Render {
     @Override
     public void render(Object obj, Context ctx) throws Throwable {
