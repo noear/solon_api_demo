@@ -3,6 +3,7 @@ package apidemo4.controller.apis;
 import apidemo4.controller.ApiBase;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
+import org.noear.solon.validation.annotation.Logined;
 
 
 /**
@@ -11,8 +12,9 @@ import org.noear.solon.annotation.Mapping;
  * @author noear 2021/6/11 created
  */
 @Component(tag = "api")
-public class API_error extends ApiBase {
-    @Mapping("error")
+public class API_test_error extends ApiBase {
+    @Logined //登录用户才可用
+    @Mapping("test.error")
     public void exec() {
         throw new RuntimeException("随便报一下");
     }

@@ -11,8 +11,8 @@ import org.noear.solon.annotation.Mapping;
  * @author noear 2021/6/11 created
  */
 @Component(tag = "api")
-public class API_hello_world extends ApiBase {
-    @Mapping("hello")
+public class API_test_hello extends ApiBase {
+    @Mapping("test.hello")
     public String exec(String name) {
         return "Hello " + name;
     }

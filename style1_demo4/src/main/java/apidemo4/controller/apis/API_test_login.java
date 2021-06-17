@@ -8,8 +8,8 @@ import org.noear.solon.annotation.Mapping;
  * @author noear 2021/6/17 created
  */
 @Component(tag = "api")
-public class API_login extends ApiBase {
-    @Mapping("login")
+public class API_test_login extends ApiBase {
+    @Mapping("test.login")
     public void exec() {
 
     }
