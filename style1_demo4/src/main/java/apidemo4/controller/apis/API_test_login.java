@@ -12,6 +12,8 @@ import org.noear.solon.core.handle.Context;
 public class API_test_login extends ApiBase {
     @Mapping("test.login")
     public String exec(Context ctx) {
+        //登录成功后....（代码略）
+
         //设置session
         ctx.sessionSet("user_id", 12L);
 
