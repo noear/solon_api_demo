@@ -16,6 +16,11 @@
         <module>style1_demo2</module>
         <module>style1_demo3</module>
         <module>style1_demo4</module>
+
+        <module>style2_demo1</module>
+        <module>style2_demo2</module>
+        <module>style2_demo3</module>
+        <module>style2_demo4</module>
     </modules>
 
 </project>
