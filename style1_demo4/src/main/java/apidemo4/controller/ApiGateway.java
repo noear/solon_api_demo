@@ -1,6 +1,5 @@
 package apidemo4.controller;
 
-import apidemo4.controller.interceptor.TokenInterceptor;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Mapping;
 
@@ -14,10 +13,6 @@ import org.noear.solon.annotation.Mapping;
 public class ApiGateway extends ApiGatewayBase {
     @Override
     protected void register() {
-
-        //添加个拦截器
-        before(new TokenInterceptor());
-
         //添加Bean
         addBeans(bw -> "api".equals(bw.tag()));
     }

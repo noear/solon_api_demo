@@ -10,6 +10,11 @@ import org.noear.solon.validation.annotation.LoginedChecker;
 public class LoginedCheckerImpl implements LoginedChecker {
     @Override
     public boolean check(Logined anno, Context ctx, String userKeyName) {
-        return ctx.session("user_id", 0L) > 0L;
+        Number user_id = ctx.session("user_id", null);
+        if (user_id != null) {
+            return user_id.longValue() > 0L;
+        } else {
+            return false;
+        }
     }
 }

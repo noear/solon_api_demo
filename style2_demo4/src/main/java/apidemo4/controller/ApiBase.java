@@ -5,10 +5,12 @@ import org.noear.solon.core.handle.Context;
 import org.noear.solon.core.handle.ModelAndView;
 import org.noear.solon.core.handle.Render;
 import org.noear.solon.core.handle.Result;
+import org.noear.solon.validation.annotation.Valid;
 
 /**
  * @author noear 2021/6/11 created
  */
+@Valid
 public class ApiBase implements Render {
     @Override
     public void render(Object obj, Context ctx) throws Throwable {
