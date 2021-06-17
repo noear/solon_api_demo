@@ -1,7 +1,7 @@
-server.port: 8083
+server.port: 8084
 
 solon.app:
-  name: demoapi3
+  name: demoapi4
   group: demo
 
 demo.cache1:
