@@ -34,14 +34,14 @@ public class ApiTest extends HttpTestBase {
 
     @Test
     public void api_() throws IOException {
-        assert apiCall("/api/").get("code").getInt() == 404;
+        assert apiCall("/api/").get("code").getInt() == 403;
         assert apiCall("/api/?t=1").get("code").getInt() == 404;
     }
 
     @Test
     public void api_2() throws IOException {
-        assert apiCall("/api/xxx").get("code").getInt() == 404;
-        assert apiCall("/api/xxx/yyy").get("code").getInt() == 404;
+        assert apiCall("/api/xxx").get("code").getInt() == 403;
+        assert apiCall("/api/xxx/yyy").get("code").getInt() == 403;
         assert apiCall("/api/xxx?t=1").get("code").getInt() == 404;
         assert apiCall("/api/xxx/yyy?t=1").get("code").getInt() == 404;
     }
