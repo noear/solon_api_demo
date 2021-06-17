@@ -12,10 +12,10 @@
     <description>Java project for solon-api demo</description>
 
     <modules>
-        <module>demo1</module>
-        <module>demo2</module>
-        <module>demo3</module>
-        <module>demo4</module>
+        <module>style1_demo1</module>
+        <module>style1_demo2</module>
+        <module>style1_demo3</module>
+        <module>style1_demo4</module>
     </modules>
 
 </project>

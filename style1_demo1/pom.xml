@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.noear.apidemo</groupId>
-    <artifactId>demo2</artifactId>
+    <artifactId>style1_demo1</artifactId>
     <version>demo</version>
     <packaging>jar</packaging>
 
     <description>Java project for solon-api demo</description>
-
 
     <parent>
         <groupId>org.noear</groupId>
@@ -59,7 +58,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>apidemo2.App</mainClass>
+                            <mainClass>apidemo1.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -76,4 +75,5 @@
         </plugins>
 
     </build>
+
 </project>

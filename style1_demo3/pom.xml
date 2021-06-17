@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.noear.apidemo</groupId>
-    <artifactId>demo4</artifactId>
+    <artifactId>style1_demo3</artifactId>
     <version>demo</version>
     <packaging>jar</packaging>
 
@@ -88,7 +88,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>apidemo4.App</mainClass>
+                            <mainClass>apidemo3.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
