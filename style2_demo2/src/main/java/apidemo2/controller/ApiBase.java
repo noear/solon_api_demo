@@ -13,8 +13,6 @@ public class ApiBase implements Render {
         if (ctx.getRendered()) {
             return;
         }
-        //最多一次渲染
-        ctx.setRendered(true);
 
         //如果是异常
         if (obj instanceof Throwable) {
