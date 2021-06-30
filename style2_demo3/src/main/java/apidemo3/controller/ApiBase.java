@@ -16,8 +16,6 @@ public class ApiBase implements Render {
             return;
         }
 
-        ctx.setRendered(true);
-
         //
         // 有可能根本没数据过来
         //

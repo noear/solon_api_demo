@@ -17,9 +17,8 @@ public class ApiBase implements Render {
         //如果是异常
         if (obj instanceof Throwable) {
             ctx.render(Result.failure("unknown error"));
-            return;
+        }else {
+            ctx.render(obj);
         }
-
-        ctx.render(obj);
     }
 }
