@@ -15,8 +15,7 @@ server.session:
       allowUseHeader: true #充许使用Header传递；（可不配，默认：使用 Cookie 传递）；true，则使用 header 传递
 
 demo.cache1:
-  server: redis.water.io:6379
-  user: redis
+  server: localhost:6379
   password: 123456
 
 
@@ -26,3 +25,8 @@ demo.db1:
     driverClassName: com.mysql.jdbc.Driver
     username: root
     password: 123456
+
+demo.rd1:
+  server: localhost:6379
+  password: 123456
+  db: 1

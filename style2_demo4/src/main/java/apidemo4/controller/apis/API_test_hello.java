@@ -5,6 +5,7 @@ import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Controller;
 import org.noear.solon.annotation.Mapping;
 import org.noear.solon.validation.annotation.Logined;
+import org.noear.solon.validation.annotation.NoRepeatSubmit;
 
 
 /**
@@ -15,6 +16,7 @@ import org.noear.solon.validation.annotation.Logined;
 @Mapping("api")
 @Controller
 public class API_test_hello extends ApiBase {
+    @NoRepeatSubmit
     @Logined //登录用户才可用
     @Mapping("test.hello")
     public String exec(String name) {
