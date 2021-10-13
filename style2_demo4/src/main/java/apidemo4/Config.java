@@ -1,12 +1,12 @@
 package apidemo4;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.noear.redisx.RedisClient;
 import org.noear.solon.annotation.Bean;
 import org.noear.solon.annotation.Configuration;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.cache.jedis.RedisCacheService;
 import org.noear.solon.data.cache.CacheService;
-import org.noear.solon.extend.redisx.RedisClient;
 
 import javax.sql.DataSource;
 
