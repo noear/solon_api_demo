@@ -13,4 +13,4 @@
 * demo4 : 在 demo3 基础上，增加 1)换成JWT session、2)采用xx.xx命名接口名、3)增加锁、防重复提交
 
 
-轻网关的高级定制可以参考：[https://gitee.com/noear/srww/tree/main/srww.uapi](https://gitee.com/noear/srww/tree/main/srww.uapi)
+轻网关的高级定制可以参考：[https://gitee.com/noear/seed/tree/main/seed.uapi](https://gitee.com/noear/seed/tree/main/seed.uapi)
