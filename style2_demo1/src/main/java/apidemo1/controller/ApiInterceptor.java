@@ -1,20 +1,25 @@
 package apidemo1.controller;
 
+import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Controller;
 import org.noear.solon.annotation.Mapping;
 import org.noear.solon.core.handle.Context;
+import org.noear.solon.core.handle.Handler;
 import org.noear.solon.core.handle.Result;
+import org.noear.solon.core.route.RouterInterceptor;
+import org.noear.solon.core.route.RouterInterceptorChain;
 
 /**
  * @author noear 2021/6/17 created
  */
-@Controller
-public class ApiInterceptor {
-    //
-    // after=true 或 before=true，则不能返回值
-    //
-    @Mapping(value = "**", after = true)
-    public void check404(Context ctx) throws Throwable{
+@Component
+public class ApiInterceptor implements RouterInterceptor {
+
+    @Override
+    public void doIntercept(Context ctx, Handler mainHandler, RouterInterceptorChain chain) throws Throwable {
+
+        chain.doIntercept(ctx, mainHandler);
+
         //如果未处理，或状态为404；则输出404提示
         if (ctx.getHandled() == false || ctx.status() == 404) {
             ctx.setHandled(true);
