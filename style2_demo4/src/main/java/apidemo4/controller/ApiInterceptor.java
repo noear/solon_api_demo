@@ -10,7 +10,8 @@ import org.noear.solon.core.route.RouterInterceptorChain;
 /**
  * @author noear 2021/6/17 created
  */
-@Component
+//@Mapping(path="**", index=-1, after=true)
+@Component(index = -1)
 public class ApiInterceptor implements RouterInterceptor {
 
     @Override
