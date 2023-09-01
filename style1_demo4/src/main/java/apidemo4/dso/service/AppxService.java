@@ -1,7 +1,7 @@
 package apidemo4.dso.service;
 
 import apidemo4.model.AppxModel;
-import org.noear.solon.annotation.ProxyComponent;
+import org.noear.solon.annotation.Component;
 import org.noear.solon.data.annotation.Cache;
 import org.noear.weed.DbContext;
 import org.noear.weed.annotation.Db;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 /**
  * @author noear 2021/6/11 created
  */
-@ProxyComponent
+@Component
 public class AppxService {
 
     //Db 是 weed3 的注解；可将数据源注入为 weed3 上下文，或者 Mapper
